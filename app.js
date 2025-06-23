@@ -65,9 +65,9 @@ const sessionOptions={
 
 
 //Sample Main route//
-// app.get("/",(req,res)=>{
-//     res.send("Main Path");
-// })
+app.get("/",(req,res)=>{
+    res.redirect("/listings");
+})
 
 app.listen(8080,()=>{
     console.log(`App is Running on port ${port}`)
@@ -94,16 +94,6 @@ app.use((req,res,next)=>{
     next();
 })
 
-app.get("/demouser", async(req,res)=>{
-    let fakeuser=new User({
-        email:"fake@email.com",
-        username:"Fake User"
-    })
-
-   let registereduser=await User.register(fakeuser,"helloWorld")
-   res.send(registereduser)
-})
-
 
 //Mongoose Connection
 
@@ -116,7 +106,6 @@ main().then(()=>
 })
 async function main() {
     await mongoose.connect(dbUrl);
-    
 }
 
 
