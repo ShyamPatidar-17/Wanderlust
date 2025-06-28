@@ -7,7 +7,6 @@ WanderLust is a full-featured web application that allows users to discover, rev
 - Express.js
 - MongoDB
 - EJS (Embedded JavaScript templates)
-- Bootstrap (for styling)
 - Passport.js for authentication
 
 ## 🧩 Key Features
